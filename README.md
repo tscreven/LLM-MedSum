@@ -33,6 +33,12 @@ saves the generated summaries to the filepath the user inputs.
 Training occurs in `SK-Tuning_Full-Finetuning.ipynb` (SK Tuning and Full Finetuning approaches are in this notebook) 
 and `LoRA.ipynb`. Our recommendation would be to use a GPU to ensure a faster training process.
 
+Brief descriptions of the model adaptation files file are as followed:
+`LoRA.ipynb` - Fine tuning approach which freezes the main model and inserts new layers, called low rank adaptors into the attention layers.
+`SK-Tuning_Full-Finetuning.ipynb` - Contains both the semantic knowledge fine tuning and fully finetuning approaches. Full fine tuning involves 
+training all of the 220 million parameters that are there in T5-base. Semantic Knowlege tuning's training is less expensive as a small amount virtual prompt 
+embeddings is trained. Here, that is 20 virtual tokens.
+
 ## ModelResults.ipynb
 Generates token and semantic similarity scores for model results. Creates tables and graphs displaying effectiveness of baseline and fine-tuning/adaptation techniques. 
 
