@@ -30,6 +30,9 @@ After this, run all of the cells in the notebook in order to train (if
 applicable) and then get the generated summaries. The notebook automaticaly
 saves the generated summaries to the filepath the user inputs.
 
+Training occurs in `SK-Tuning_Full-Finetuning.ipynb` (SK Tuning and Full Finetuning approaches are in this notebook) 
+and `LoRA.ipynb`. Our recommendation would be to use a GPU to ensure a faster training process.
+
 ## ModelResults.ipynb
 Generates token and semantic similarity scores for model results. Creates tables and graphs displaying effectiveness of baseline and fine-tuning/adaptation techniques. 
 
