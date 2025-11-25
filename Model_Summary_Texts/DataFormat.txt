@@ -1,0 +1,4 @@
+Data format: 
+    - Model summary text loaded into vectors in data format .npy files
+    - File name: <method name>_text.npy
+    - Shape of matrix: (200,0)
