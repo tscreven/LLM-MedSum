@@ -35,11 +35,17 @@ and `LoRA.ipynb`. Our recommendation would be to use a GPU to ensure a faster tr
 
 Brief descriptions of the model adaptation files file are as followed:
 
-`LoRA.ipynb` - Fine tuning approach which freezes the main model and inserts new layers, called low rank adaptors into the attention layers.
+* `LoRA.ipynb` - Fine tuning approach which freezes the main model and inserts new layers, called low rank adaptors into the attention layers.
 
-`SK-Tuning_Full-Finetuning.ipynb` - Contains both the semantic knowledge fine tuning and fully finetuning approaches. Full fine tuning involves 
+* `SK-Tuning_Full-Finetuning.ipynb` - Contains both the semantic knowledge fine tuning and fully finetuning approaches. Full fine tuning involves 
 training all of the 220 million parameters that are there in T5-base. Semantic Knowlege tuning's training is less expensive as a small amount virtual prompt 
 embeddings is trained. Here, that is 20 virtual tokens.
+
+* `Retrieval.ipynb` - This file is for the hirarchial retrieval adaptation technique with the goal to try to find the sections that are the most relevant
+(objective, methods, and conclusion. The Facebook AI Similarity Score metric (FAISS) was used for trying to reduce noise prior to the summarization process.
+
+* `Oneshot.ipynb` - Python notebook for the one-shot prompting approach, which adds an input and output exemplar for in-context learning. This requires no
+training.
 
 ## ModelResults.ipynb
 Generates token and semantic similarity scores for model results. Creates tables and graphs displaying effectiveness of baseline and fine-tuning/adaptation techniques. 
