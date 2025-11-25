@@ -1,5 +1,13 @@
 # LLM-MedSum
-Fine-tuning and adaptation methods applied on T5-base with the purpose of summarizing academic medical articles on Pubmed. 
+Fine-tuning and adaptation methods applied on T5-base with the purpose of summarizing academic medical articles on Pubmed.
+
+To run this code in Google CoLab to use GPUs, Google Drive must be mounted. Add this cell as the first cell in every notebook:
+```
+# Change path to desired filepath.
+path = "."
+from google.colab import drive
+drive.mount('/content/drive/' + path)
+```
 
 ## Adaptation/Fine-tuning Method Notebooks
 We applied fine-tuning and adaptation techniques to T5-base. Each fine-tuning
